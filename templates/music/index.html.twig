@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}Liste des musiques {% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  {{ form_start(form) }}
+  <div class="row align-items-end">
+    <div class="col-2 pt-4">
+      {{ form_row(form.chercheTitre) }}
+    </div>
+
+    <div class="col-2">
+      {{ form_row(form.chercheAlbum) }}
+    </div>
+
+    <div class="col-2">
+      {{ form_row(form.chercheArtiste) }}
+    </div>
+  </div>
+
+  <div class="form-group"></div>
+    <div class="col"></div>
+      <button class="btn btn-dark">Rechercher</button>
+    </div>
+  </div>
+  {{ form_end(form) }}
+</div>
+
+
+<div class="container rosepale text-center col-12 col-md-6">
+  <h1 class="p-3">Liste des musiques</h1>
+</div>
+
+<div class="container">
+  <div class="pagination">
+    {{ knp_pagination_render(music)  }}
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-5 g-4">
+    {% for m in music %}
+    <div class="col-3 zoom">
+      {% include 'music/_music.html.twig' %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+  {% block javascripts %}
+  {% endblock %}
+  
+{% endblock %}
+
+
+

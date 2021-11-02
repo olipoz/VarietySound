@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des albums{% endblock %}
+
+{% block body %}
+<div class="container rosepale text-center col-12 col-md-6 p-3">
+    <h1 class="p-3">Liste des albums</h1>
+</div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-5 g-4">
+        {% for a in album %}
+        <div class="col-3 zoom">
+            <div class="card h-100 border-dark border border-4 rounded-3 text-white bg-dark mb-4">
+                <img src="{{asset('images/album/' ~ a.image)}}" class="card-img-top">
+                <div class="card-body bg-dark">
+                    <h5 class="card-title text-center rosepale"> {{ a.nom }} </h5>
+                    <p class="card text-center text-white bg-dark rosepale">{{ a.artiste.nom }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>    
+
+{% block javascripts %}
+{% endblock %}
+
+{% endblock %}

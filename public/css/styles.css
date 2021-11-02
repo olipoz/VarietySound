@@ -1,0 +1,107 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/* Style pour empeêcher les float */
+.clear{
+	clear: both;
+	width: 0;
+	height: 0;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+.rosepale
+{
+	color:#F2D7D5;
+}
+
+.orange
+{
+	color: rgb(225, 126, 7);
+}
+.gray
+{
+	color: rgb(59, 66, 73);
+}
+.darkbrown
+{
+	color: #45392A;
+}
+.brown
+{
+	color: #856E51;
+}
+.lightbrown
+{
+	color: #AB8E68;
+}
+.darkbeige
+{
+	color: #C4A378;
+}
+.beige
+{
+	color: #D1AE80;
+}
+.black
+{
+	color: black;
+}
+.white
+{
+	color: white;
+}
+.navy
+{
+	color: navy;
+}
+.mid-gray
+{
+	color: rgb(102,102,102);
+}
+.bg-mid-gray
+{
+	background-color: rgb(102, 102, 102);
+}
+.bg-gray
+{
+	background-color: rgb(59, 66, 73);
+}
+.bg-lightgray
+{
+	background-color: lightgray;
+}
+.bg-navy
+{
+	background-color: navy;
+}
+.bg-white
+{
+	background-color: white;
+}
+.bg-black
+{
+	background-color: black;
+}
+.bg-orange
+{
+	background-color: rgb(225, 126, 7);
+}
+.bg-indigo
+{
+	background-color: rgb(75, 0, 130);
+}
+.zoom{
+	transition-duration: 1s;
+}
+
+.zoom:hover{
+	transform: scale(1.1);
+}
+
+
+.p1{
+	line-height: 2em
+}

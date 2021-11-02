@@ -1,0 +1,20 @@
+<div class="card h-100 border-dark border border-4 rounded-3 text-white bg-dark mb-4">
+    <img src="{{asset('images/artiste/' ~ m.artiste.image)}}" class="card-img-top">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-center rosepale"> {{ m.album.nom }} </h5>
+      <p class="card text-center text-white bg-dark rosepale">{{ m.titre }}</p>
+      <p class="card text-center text-white bg-dark rosepale">{{ m.artiste.nom }}</p>
+
+      {% if app.user %}
+        {% if m in app.user.musics %}
+          <p class="text-center beige">Ce titre est dans votre playlist</p>
+        {% else %}
+          <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <a class="rosepale btn btn-sm btn-secondary me-md-2" href="{{path('ajoutPlaylist', { 'id' : m.id })}}">+ 
+              playlist</a>
+            <a class="rosepale btn btn-sm btn-secondary" href="{{m.lienYT}}" target="_blank">Youtube</a>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
